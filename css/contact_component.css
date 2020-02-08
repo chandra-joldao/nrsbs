@@ -1,0 +1,63 @@
+.banner {
+  background-image: url("file:///C:/xampp/htdocs/my_project/img/contactbg1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 600px;
+  }
+.aboutus {
+      margin-top: -25px;
+      }
+/* .container {
+      padding-top:25px;
+      padding-bottom: 50px;
+      }  */
+      
+button:focus{
+  outline-style: none;
+}
+.ContactBox{
+  margin-left: 150px;
+}
+input[type=text],email {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.ContactTextarea{
+  width: 80%;
+  height: 125px;
+}
+
+@media screen and (min-width:345px){
+  .ContactBox{
+    margin-left:5px;
+  }
+  .ContactTextarea{
+    width: 100%;
+    height: 125px;
+  }
+}
+@media screen and (min-width:993px){
+  .ContactTextarea{
+    width: 80%;
+    height: 125px;
+  }
+  input[type=text],email {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .ContactBox{
+    margin-left: 150px;
+  }
+}

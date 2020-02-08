@@ -1,0 +1,29 @@
+.banner {
+    background-image: url("file:///C:/xampp/htdocs/my_project/img/aboutbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+   height: 600px;
+    }
+.aboutus {
+        margin-top: -25px;
+        }
+.bgcolor {
+        background-color:#1c2979;
+        opacity: 0.6;
+        /* filter: alpha(opacity=69); */
+        width: 100%;
+        height:600px;
+         margin-top: 0px; 
+    }
+.aboutContaner {
+        padding-top:25px;
+        padding-bottom: 50px;
+        }
+         
+/* button:focus{
+    outline-style: none;
+    background-color: blue;
+} */
+
