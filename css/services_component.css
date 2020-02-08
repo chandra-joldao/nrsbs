@@ -1,0 +1,25 @@
+.img-rounded{
+    border-radius: 50%;
+    border: 3px solid #f8e90e;
+}
+.services_sction{
+    text-align: center;
+    /* padding-bottom: 50px; */
+}
+/* .container{
+    margin-top: 80px;
+}
+ */
+button:focus{
+    outline-style: none;
+}
+.servicesmargin{
+    padding-right:100px;
+    padding-left: 100px; 
+}
+@media (max-width: 460px) {
+    .servicesmargin{
+        padding-right:30px;
+        padding-left: 30px; 
+    }
+}
