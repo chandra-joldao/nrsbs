@@ -749,6 +749,9 @@ padding-left:200px;
   margin-right: auto;
   margin-bottom: 30px;
 }
+.product_range_size{
+  padding-top: 165px;
+}
 @media only screen and (max-width:766px){
   .all_box{
     border: none;
@@ -766,14 +769,17 @@ padding-left:200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -60px;
-    width: 60%;
+    width: 100%;
+  }
+  .product_range_size{
+    padding-top: 180px;
   }
 }
 @media only screen and (max-width:432px){
   .bluebox{
     width: 90%;
     height: 250px; 
-    background-color: blue;
+    background-color: rgb(120, 203, 236);
     margin:auto;
     padding-top: 15px;
   }
@@ -784,28 +790,9 @@ padding-left:200px;
     background-position: center;
     margin-top: 12px;
 }
+.product_range_size{
+  padding-top: 190px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
