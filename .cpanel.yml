@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/dwwfhd3a1eux/public_html/nrsbs/
+    - /bin/cp -R images $DEPLOYPATH
