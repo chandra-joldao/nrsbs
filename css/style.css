@@ -760,12 +760,14 @@ padding-left:200px;
   padding-top: 165px;
 }
 
-
-
-
-
-
-
+.side_image{
+  width: 200px;
+  height: 200px;
+}
+.side_image2{
+  width: 200px;
+  height: 190px;
+}
 
 .contact_section{
  /*  background-color: #0255a3; */
@@ -774,6 +776,17 @@ padding-left:200px;
   padding-top: 150px;
 }
 .contact_form input[type=text] {
+  width: 100%;
+  padding: 2px 5px;
+  margin: 6px 0;
+  box-sizing: border-box; 
+  border-radius: 6px;
+  /* background-color:#0255a3; */
+  border: #fff 0.6px solid;
+  color: white;
+  min-height: 40;
+}
+.contact_form input[type=number] {
   width: 100%;
   padding: 2px 5px;
   margin: 6px 0;
@@ -966,7 +979,7 @@ padding-left:200px;
     margin-top: 12px;
 }
 .product_range_size{
-  padding-top: 190px;
+  margin-top: -100px;
 }
 }
 @media only screen and (max-width:432px){
@@ -987,6 +1000,15 @@ padding-left:200px;
     border-radius: 6px;
     border:#fff 1px solid;
     width: 100%;
+  }
+  .side_image{
+    width: 100px;
+    height: 100px;
+  }
+  .side_image2{
+    width: 100px;
+    height: 100px;
+    margin-top: 91px;
   }
 }
 
