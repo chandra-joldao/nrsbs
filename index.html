@@ -34,6 +34,29 @@
       height: 100%;
     }
   </style>
+  <script>
+    $(function () {
+      $("#contact-form").submit(function (e) {
+        alert();
+        e.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+          type: "POST",
+          url: "call-form.php",
+          dataType: "json", // Add datatype
+          data: form_data
+        }).done(function (data) {
+          console.log(data);
+          alert("It's OK!");
+        }).fail(function (data) {
+          console.log(data);
+        });
+      });
+    });
+    function contact(){
+      alert();
+    }
+  </script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -388,7 +411,7 @@
       </div>
     </div>
     <div>
-      <img src="image/right_pic_1.png" class="float-right side_image2" >
+      <img src="image/right_pic_1.png" class="float-right side_image2">
     </div>
 
   </section>
@@ -556,16 +579,16 @@
       <div class="container-fluid contact_section">
         <div class="row">
           <div class="col-md-6 contact_form">
-             <h5>Contact Messages</h5>
+            <h5>Contact Messages</h5>
             <div class="contact_us">
-              <form action="post">
-                <input type="text" placeholder="&nbsp;Name">
-                <input type="text" placeholder="&nbsp;Email">
-                <input type="number" placeholder="&nbsp;Ph No">
+              <form id="contact-form" action="contact()">
+                <input type="text" name="name" placeholder="&nbsp;Name">
+                <input type="text" name="email" placeholder="&nbsp;Email">
+                <input type="number" name="mobile" placeholder="&nbsp;Ph No">
                 <!-- <input type="text" placeholder="&nbsp;Pin code"> -->
-                <textarea name="text" placeholder="&nbsp;Message"></textarea>
+                <textarea name="message" placeholder="&nbsp;Message"></textarea>
                 <br>
-                <button class="button" type="button" value="submit">Submit</button>
+                <button class="button" type="submit">Submit</button>
               </form>
             </div>
           </div>
@@ -635,4 +658,5 @@
   <script src="vendors/isotope/isotope-min.js"></script>
   <script src="js/theme.js"></script>
 </body>
+
 </html>

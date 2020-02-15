@@ -781,9 +781,8 @@ padding-left:200px;
   margin: 6px 0;
   box-sizing: border-box; 
   border-radius: 6px;
-  /* background-color:#0255a3; */
+  background-color: white;
   border: #fff 0.6px solid;
-  color: white;
   min-height: 40;
 }
 .contact_form input[type=number] {
