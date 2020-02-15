@@ -17,11 +17,11 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-   <link rel="stylesheet" href="css/jquery.fancybox.min.css"> 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <!--     <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+  <!--   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+  <!--    <link rel="stylesheet" href="css/jquery.fancybox.min.css">  -->
+  <!--  <link rel="stylesheet" href="css/bootstrap-datepicker.css"> -->
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
@@ -34,6 +34,30 @@
       height: 100%;
     }
   </style>
+  <script>
+    function ValidationEvent() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var mobile = document.getElementById("mobile").value;
+      var message = document.getElementById("message").value;
+      if (name != '' && email != '' && mobile != '') {
+        var dataString = 'name='+ name + '&email='+ email + '&mobile' + mobile + '&message' + message; 
+        $.ajax({
+          type: "POST",
+          //url: "localhost:/nrsbs/ajaxsubmit.php",
+          url: "ajaxsubmit.php",
+          data: dataString,
+          cache: false,
+          success: function (result) {
+            alert(result);
+          }
+        });
+      }
+      else {
+        alert("Please fill up the mandetory field");
+      }
+    }
+  </script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -53,7 +77,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-6 col-xl-2">
-          <h1 class="mb-0 site-logo"><a href="index3.html" class="text-black mb-0">NRSBS </a></h1>
+          <h1 class="mb-0 site-logo"><a href="www.nrsbs.co.in" class="text-black mb-0">NRSBS </a></h1>
           <p style="font-size: 14PX;">WATER SYSTEMS PVT.LTD</p>
         </div>
         <div class="col-12 col-md-10 d-none d-xl-block">
@@ -92,10 +116,7 @@
   <!--_______________________Start page 1________________________-->
 
 
-  <!--     <div>
-      <img src="image/banar001.jpg" class="baner">
-    </div> -->
-  <section id="home-section" style="padding-top: 137px;">
+  <section id="home-section" style="padding-top: 140px;">
     <div id="demo" class="carousel slide" data-ride="carousel">
       <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -104,24 +125,42 @@
       </ul>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="image/SAMCO-TECH-033-11.jpg" alt="Los Angeles" width="1100" height="500">
-          <div class="carousel-caption">
+          <img src="image/SAMCO-TECH-033-11.jpg" alt="Los Angeles" width="1100" height="500" style="height: 600px;">
+          <div class="carousel-caption" data-aos="fade-down" data-aos-delay="900">
             <h3>WATER SYSTEM</h3>
-            <p>We had such a great time in LA!</p>
+            <p>NRSBS water systems Pvt. Ltd. is a leader<br>
+              Softener, Lamella Clarifier, Iron removal (IP),<br>
+              Demineralsation water (DM), Revers<br>
+              osmosis System (RO), Drinking water,<br>
+              Effluent treatment Plant (ETP), Sewage<br>
+              Treatment Plant (STP), Digasser Tower,<br>
+              Arsenic Iron Treatment Plant (AIRP)</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="image/high_BWSC-Kenya1.jpg " alt="Chicago" width="1100" height="500">
-          <div class="carousel-caption">
-            <h3>Chicago</h3>
-            <p>Thank you, Chicago!</p>
+          <img src="image/high_BWSC-Kenya1.jpg " alt="Chicago" width="1100" height="500" style="height: 600px;">
+          <div class="carousel-caption" class="carousel-caption" data-aos="fade-down" data-aos-delay="900">
+            <h3>WATER SYSTEM</h3>
+            <p>NRSBS water systems Pvt. Ltd. is a leader<br>
+              Softener, Lamella Clarifier, Iron removal (IP),<br>
+              Demineralsation water (DM), Revers<br>
+              osmosis System (RO), Drinking water,<br>
+              Effluent treatment Plant (ETP), Sewage<br>
+              Treatment Plant (STP), Digasser Tower,<br>
+              Arsenic Iron Treatment Plant (AIRP)</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="image/wast-water-slider.jpg" alt="New York" width="1100" height="600">
-          <div class="carousel-caption">
-            <h3>New York</h3>
-            <p>We love the Big Apple!</p>
+          <img src="image/wast-water-slider.jpg" alt="New York" width="1100" height="500" style="height: 600px;">
+          <div class="carousel-caption" class="carousel-caption" data-aos="fade-down" data-aos-delay="900">
+            <h3>WATER SYSTEM</h3>
+            <p>NRSBS water systems Pvt. Ltd. is a leader<br>
+              Softener, Lamella Clarifier, Iron removal (IP),<br>
+              Demineralsation water (DM), Revers<br>
+              osmosis System (RO), Drinking water,<br>
+              Effluent treatment Plant (ETP), Sewage<br>
+              Treatment Plant (STP), Digasser Tower,<br>
+              Arsenic Iron Treatment Plant (AIRP)</p>
           </div>
         </div>
       </div>
@@ -146,16 +185,13 @@
       <div class="row">
         <div class="col-md-6">
           <p>
-            <h3 data-aos="fade-right"
-            data-aos-delay="400">
+            <h3 data-aos="fade-right" data-aos-delay="400">
               <B style="color: rgb(103, 103, 247);"> NRSBS WATER SYSTEMS </B>
             </h3>
-            <h3 data-aos="fade-right"
-            data-aos-delay="400">
+            <h3 data-aos="fade-right" data-aos-delay="400">
               <B style="color: rgb(103, 103, 247);"> THE PROMIES OF PURITY </B>
             </h3>
-            <p data-aos="fade-in"
-            data-aos-delay="900" style="color: black;">
+            <p data-aos="fade-in" data-aos-delay="900" style="color: black;">
               NRSBS has come a long way since its humble beginnings
               nerly three decades ago and established itslf as
               india's most trusted enfineering solution provider.
@@ -168,10 +204,9 @@
               highly differrentiated, yeat customixed solutions.
             </p>
         </div>
-        <div class="col-md-6" >
+        <div class="col-md-6">
           <div>
-            <img src="image/pic_3.png" style="width:90%;" data-aos="fade-in"
-            data-aos-delay="900">
+            <img src="image/pic_3.png" style="width:90%;" data-aos="fade-in" data-aos-delay="900">
           </div>
         </div>
       </div>
@@ -187,9 +222,11 @@
   <section>
     <div class="bgimage">
       <div></div><br><br><br><br>
-      <div class="bluebox">
-        <h4 style="color: rgb(255, 255, 255); font-weight: 600; text-align: center;">WATER SYSTEMS</h4>
-        <p style="text-align: center; color: rgb(51, 48, 238); font-weight: 600;">
+      <div class="bluebox" data-aos="fade-in" data-aos-delay="100">
+        <h4 data-aos="fade-down" data-aos-delay="300"
+          style="color: rgb(255, 255, 255); font-weight: 600; text-align: center;">WATER SYSTEMS</h4>
+        <p data-aos="fade-up" data-aos-delay="900"
+          style="text-align: center; color: rgb(51, 48, 238); font-weight: 600;">
           NRSBS water systems Pvt. Ltd. is a leader<br>
           Softener, Lamella Clarifier, Iron removal (IP),<br>
           Demineralsation water (DM), Revers<br>
@@ -209,22 +246,26 @@
   <section id="" style="padding-top:140px;">
     <div class="container textstyle1">
       <div>
-        <h4>Vision:</h4>
-        <p>Our vision is to continue to evolve as a leader in the Development and Supply of Solutions to meet<br>
+        <h4 data-aos="fade-right" data-aos-delay="600">Vision:</h4>
+        <p data-aos="fade-left" data-aos-delay="900">Our vision is to continue to evolve as a leader in the Development
+          and Supply of Solutions to meet<br>
           the increasingly complex demand of our clients for highly customised and Engineered.
         </p>
       </div>
       <div>
-        <h4>We are Driven By:</h4>
-        <p># Custom design and Engineering.</p>
-        <p># Working in all industries and throughout the Nation, constantly seeking new applications and<br>
+        <h4 data-aos="fade-right" data-aos-delay="100">We are Driven By:</h4>
+        <p data-aos="fade-left" data-aos-delay="300"># Custom design and Engineering.</p>
+        <p data-aos="fade-left" data-aos-delay="500"># Working in all industries and throughout the Nation, constantly
+          seeking new applications and<br>
           challenges.
         </p>
-        <p># Benefit from our years of experience and Expertise .</p>
-        <p>These values as well as the Development of sustainable solution to protect the natural resource<br>
+        <p data-aos="fade-left" data-aos-delay="700"># Benefit from our years of experience and Expertise .</p>
+        <p data-aos="fade-left" data-aos-delay="800">These values as well as the Development of sustainable solution to
+          protect the natural resource<br>
           "WATER" are the embodiments of our company's entrepreneurial continuity.
         </p>
-        <p>NRSBS WATER SYSTEMS PVT.LTD IS A LEADING SUPPLIER OF SPECIALIER OF SPECIALIZED PRODUCTS,<br>
+        <p data-aos="fade-right" data-aos-delay="900">NRSBS WATER SYSTEMS PVT.LTD IS A LEADING SUPPLIER OF SPECIALIER OF
+          SPECIALIZED PRODUCTS,<br>
           EQUIPMENTS AND SYSTEM SOUCTIONS FOR FILTRATIONS & SEPERATION AND WATER<br> TECHNOLOGY FOR VARIOUS
           APPLICATIONS.
         </p>
@@ -235,95 +276,102 @@
       </div>
     </div>
     <div>
-      <img src="image/pic_6.png" style="width: 200px; height: 200px;">
+      <img src="image/pic_6.png" class="side_image">
     </div>
   </section>
-  <div id="Industries-section" style="height: 10px;"></div>
-  <section>
-    <div>
-      <img src="image/pic_5.png" style="width: 200px; height: 200px;">
-    </div>
-    <div class="container textstyle">
+  <div class="site-blocks-cover inner-page-cover overlay get-notification"
+    style="background-image: url( image/SAMCO-TECH-033-11.jpg); background-attachment: fixed; padding-bottom: 50px;"
+    data-aos="fade">
+    <div id="Industries-section" style="height: 10px;"></div>
+
+    <section>
       <div>
-        <h4>INDURSTRIES:</h4>
-        <p>NRSBS WATER SYSTEMS PVT.LTD SERVES A WIDE RANGE OF MARKETS IN THE MUNICIPAL &
-          INDUSTRIAL SECTORS.</p>
+        <img src="image/pic_5.png" class="side_image">
       </div>
-    </div>
-  </section>
+      <div class="container textstyle">
+        <div>
+          <h4 data-aos="fade-down" data-aos-delay="900" style="color: white;">INDURSTRIES:</h4>
+          <p data-aos="fade-up" data-aos-delay="900" style="color: white;">NRSBS WATER SYSTEMS PVT.LTD SERVES A WIDE
+            RANGE OF MARKETS IN THE MUNICIPAL &
+            INDUSTRIAL SECTORS.</p>
+        </div>
+      </div>
+    </section>
 
 
-  <!--_______________________page 5________________________-->
+    <!--_______________________page 5________________________-->
 
 
 
-  <section id="" style="padding-top:30px; ">
+    <section id="" style="padding-top:30px; ">
+      <div class="container">
+        <div class="row all_box_imag">
+          <div class="col-md-5 boximag">
+            <div class="markets_type_image">
+              <p data-aos="fade-right" data-aos-delay="900"># ARCHITECTURE</p>
+              <p data-aos="fade-right" data-aos-delay="900"># BULDINGS & SANITATION</p>
+              <p data-aos="fade-right" data-aos-delay="900"># CERAMIC</p>
+              <p data-aos="fade-right" data-aos-delay="900"># CHEMICAL & PHARMACEUTICAL</p>
+              <p data-aos="fade-right" data-aos-delay="900"># CONSTRUCTION & DREDGING</p>
+              <p data-aos="fade-right" data-aos-delay="900"># DESALINATION </p>
+              <p data-aos="fade-right" data-aos-delay="900"># FOOD & BEVARAGE</p>
+              <p data-aos="fade-right" data-aos-delay="900"># INDUSTRIAL WATER TREATMENT</p>
+              <p data-aos="fade-right" data-aos-delay="900"># MARINA & SHIPS</p>
+              <p data-aos="fade-right" data-aos-delay="900"># METALS & MINING</p>
+              <p data-aos="fade-right" data-aos-delay="900"># OEM</p>
+            </div>
+          </div>
+          <div class="col-md-1 box11"></div>
+          <div class="col-md-5 boximag2">
+            <div class="markets_type_image">
+              <p data-aos="fade-left" data-aos-delay="900"># OIL & GAS</p>
+              <p data-aos="fade-left" data-aos-delay="900"># POTABLE WATER TREATMENT</p>
+              <p data-aos="fade-left" data-aos-delay="900"># POWER</p>
+              <p data-aos="fade-left" data-aos-delay="900"># PULP & PAPER</p>
+              <p data-aos="fade-left" data-aos-delay="900"># REFINERIES</p>
+              <p data-aos="fade-left" data-aos-delay="900"># SEA WATER INTAKE</p>
+              <p data-aos="fade-left" data-aos-delay="900"># SEWERAGE</p>
+              <p data-aos="fade-left" data-aos-delay="900"># TRAINS & AIRCRAFT</p>
+              <p data-aos="fade-left" data-aos-delay="900"># WASTWATER TREATMENT</p>
+              <p data-aos="fade-left" data-aos-delay="900"># WATER WELL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="container">
-      <div class="row all_box">
-        <div class="col-md-5 box">
-          <div class="markets_type">
-            <p># ARCHITECTURE</p>
-            <p># BULDINGS & SANITATION</p>
-            <p># CERAMIC</p>
-            <p># CHEMICAL & PHARMACEUTICAL</p>
-            <p># CONSTRUCTION & DREDGING</p>
-            <p># DESALINATION </p>
-            <p># FOOD & BEVARAGE</p>
-            <p># INDUSTRIAL WATER TREATMENT</p>
-            <p># MARINA & SHIPS</p>
-            <p># METALS & MINING</p>
-            <p># OEM</p>
-          </div>
-        </div>
-        <div class="col-md-1 box11"></div>
-        <div class="col-md-5 box2">
-          <div class="markets_type">
-            <p># OIL & GAS</p>
-            <p># POTABLE WATER TREATMENT</p>
-            <p># POWER</p>
-            <p># PULP & PAPER</p>
-            <p># REFINERIES</p>
-            <p># SEA WATER INTAKE</p>
-            <p># SEWERAGE</p>
-            <p># TRAINS & AIRCRAFT</p>
-            <p># WASTWATER TREATMENT</p>
-            <p># WATER WELL</p>
-          </div>
-        </div>
+      <div class="textstyleimag" data-aos="fade-in" data-aos-delay="900">
+        <h4>Application ::</h4>
+        <p> NRSBS WATER SYSTEMS PVT.LTD A WIDE RANGE OF APPLICATIONS IN THE FIELDS OF FILTRTION & SEPERATION AND WATER
+          TECHNOLOGY .
+        </p>
+        <p> # WATER TREATMENT SYSTEMS.</p>
+        <p># INDUSTRIAL & ARCHITECHURAL SCEENS.</p>
+        <p># OIL & GAS</p>
+        <p># POTABLE WATER TREATMENT</p>
+        <p># POWER</p>
+        <p># PULP & PAPER</p>
+        <p># REFINERIES</p>
+        <p># SEA WATER INTAKE</p>
+        <p># SEWERAGE</p>
+        <p># TRAINS & AIRCRAFE</p>
+        <p># OIL & GAS SCREENS.</p>
+        <p># WATER WELL SCREENS.</p>
+        <p># FILTRATION & THICKENING SYSTEMS.</p>
+        <p># WATER INTAKE SYSTEMS.</p>
+        <p># VACUUM TECHNOLOGY SYSTEMS.</p>
+        <p># MINING SCREENS.</p>
       </div>
-    </div>
-  </section>
-  <div class="container">
-    <div class="textstyle">
-      <h4>Application ::</h4>
-      <p> NRSBS WATER SYSTEMS PVT.LTD A WIDE RANGE OF APPLICATIONS IN THE FIELDS OF FILTRTION & SEPERATION AND WATER
-        TECHNOLOGY .
-      </p>
-      <p> # WATER TREATMENT SYSTEMS.</p>
-      <p># INDUSTRIAL & ARCHITECHURAL SCEENS.</p>
-      <p># OIL & GAS</p>
-      <p># POTABLE WATER TREATMENT</p>
-      <p># POWER</p>
-      <p># PULP & PAPER</p>
-      <p># REFINERIES</p>
-      <p># SEA WATER INTAKE</p>
-      <p># SEWERAGE</p>
-      <p># TRAINS & AIRCRAFE</p>
-      <p># OIL & GAS SCREENS.</p>
-      <p># WATER WELL SCREENS.</p>
-      <p># FILTRATION & THICKENING SYSTEMS.</p>
-      <p># WATER INTAKE SYSTEMS.</p>
-      <p># VACUUM TECHNOLOGY SYSTEMS.</p>
-      <p># MINING SCREENS.</p>
     </div>
   </div>
+
 
   <section id="Products-section" style="padding-top: 110px;">
     <div class="container">
       <div>
         <h4 style="margin-top:25px; margin-bottom: 25px; color: #000; font-weight: 600;"> PRODUCT LIST.</h4>
       </div>
-      <div class="row all_box">
+      <div class="row all_box" data-aos="fade">
         <div class="col-md-5 box">
           <div class="markets_type">
             <p># MANUAL DUPLEX FILTER</p>
@@ -337,7 +385,7 @@
           </div>
         </div>
         <div class="col-md-1"></div>
-        <div class="col-md-5 box2">
+        <div class="col-md-5 box2" data-aos="fade">
           <div class="markets_type">
             <p># DM PLANT</p>
             <p># RO PLANT</p>
@@ -353,7 +401,7 @@
 
   <section>
     <div class="container">
-      <div class="textstyle">
+      <div class="textstyle" data-aos="fade">
         <h4>Spare parts:</h4>
         <p># MULTIPORT VALVES</p>
         <p># CARTRIDGE FILTER & ITS HOUSING</p>
@@ -364,18 +412,18 @@
       </div>
     </div>
     <div>
-      <img src="image/right_pic_1.png" class="float-right" style="width: 200px; height: 200px;">
+      <img src="image/right_pic_1.png" class="float-right side_image2">
     </div>
 
   </section>
-  <div><br><br><br><br><br><br><br><br><br><br></div>
-  <section>
+  <br><br><br><br><br><br><br>
+  <section style="background-color: rgb(144, 181, 248);">
     <div>
-      <img src="image/left_pic_2.png" alt="" style="width: 200px; height: 200px;">
+      <img src="image/left_pic_2.png" alt="" class="side_image">
     </div>
   </section>
 
-  <section id="Products_Range-section" class="product_range_size">
+  <section id="Products_Range-section" class="product_range_size" style="background-color: rgb(144, 181, 248);">
     <div>
       <img src="image/product_pic.png" class="center">
     </div>
@@ -385,15 +433,15 @@
   <!--_______________________page 6________________________-->
 
 
-  <section style="padding-bottom: 50px;">
+  <section style="padding-bottom: 50px; background-color: rgb(144, 181, 248);">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="center1">
-            <img src="image/New folder/filter.png" class="product_image1">
-            <h4>Filter & Softening Plant</h4>
-            <p><a href="">KEY FEATURES ></a></p>
-            <P>Capacity : 1m3/hr to 5 m3/hr<br>
+            <img src="image/New folder/filter.png" class="product_image1" data-aos="fade-in" data-aos-delay="900">
+            <h4 data-aos="fade-up" data-aos-delay="800">Filter & Softening Plant</h4>
+            <p data-aos="fade-in" data-aos-delay="900"><a href="">KEY FEATURES ></a></p>
+            <P data-aos="fade-in" data-aos-delay="900">Capacity : 1m3/hr to 5 m3/hr<br>
               Application : For Low & Medium pressure Boiler,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Residential
               Housing.<br>
@@ -406,10 +454,10 @@
         <br>
         <div class="col-md-6">
           <div class="center1">
-            <img src="image/New folder/reverse.png" class="product_image ">
-            <h4>Reverse Osmosis Plant</h4>
-            <p><a href="">KEY FEATURES ></a></p>
-            <p>Removal od TDS , TOC impurity from feed water <br>
+            <img src="image/New folder/reverse.png" class="product_image " data-aos="fade-in" data-aos-delay="900">
+            <h4 data-aos="fade-up" data-aos-delay="800">Reverse Osmosis Plant</h4>
+            <p data-aos="fade-in" data-aos-delay="900"><a href="">KEY FEATURES ></a></p>
+            <p data-aos="fade-in" data-aos-delay="900">Removal od TDS , TOC impurity from feed water <br>
               Capacity : 0.2m3/hr to 50 m3/hr<br>
               Application : for Drinking ,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pharma,
@@ -427,10 +475,10 @@
       <div class="row">
         <div class="col-md-6">
           <div class="center1">
-            <img src="image/New folder/iron.jpg" class="product_image1">
-            <h4>Effluent Treatment Plant (ETP)</h4>
-            <p><a href="">KEY FEATURES ></a></p>
-            <P>Capacity : 1m3 /hr to 50 m3/hr<br>
+            <img src="image/New folder/iron.jpg" class="product_image1" data-aos="fade-in" data-aos-delay="900">
+            <h4 data-aos="fade-in" data-aos-delay="900">Effluent Treatment Plant (ETP)</h4>
+            <p data-aos="fade-in" data-aos-delay="900"><a href="">KEY FEATURES ></a></p>
+            <P data-aos="fade-in" data-aos-delay="900">Capacity : 1m3 /hr to 50 m3/hr<br>
               Application : Rice mill, Paper mill, Food Industry,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jute Mill, Dying & bleaching industry,<br>
@@ -444,10 +492,10 @@
         <br>
         <div class="col-md-6">
           <div class="center1">
-            <img src="image/New folder/lamella.png" class="product_image ">
-            <h4>Lamella Clarifier system</h4>
-            <p><a href="">KEY FEATURES ></a></p>
-            <p>Capacity : 1m3 /hr to 100 m3/hr<br>
+            <img src="image/New folder/lamella.png" class="product_image " data-aos="fade-in" data-aos-delay="900">
+            <h4 data-aos="fade-in" data-aos-delay="900">Lamella Clarifier system</h4>
+            <p data-aos="fade-in" data-aos-delay="900"><a href="">KEY FEATURES ></a></p>
+            <p data-aos="fade-in" data-aos-delay="900">Capacity : 1m3 /hr to 100 m3/hr<br>
               Application : clarification of river water,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               primery Treatment of ETP Plant, STP plant,<br>
@@ -468,10 +516,10 @@
       <div class="row">
         <div class="col-md-6">
           <div class="center1">
-            <img src="image/New folder/effluent.png" class="product_image1">
-            <h4>Filter & Softening Plant</h4>
-            <p><a href="">KEY FEATURES ></a></p>
-            <P>Capacity : 1m3/hr to 5 m3/hr<br>
+            <img src="image/New folder/effluent.png" class="product_image1" data-aos="fade-in" data-aos-delay="900">
+            <h4 data-aos="fade-in" data-aos-delay="900">Filter & Softening Plant</h4>
+            <p data-aos="fade-in" data-aos-delay="900"><a href="">KEY FEATURES ></a></p>
+            <P data-aos="fade-in" data-aos-delay="900">Capacity : 1m3/hr to 5 m3/hr<br>
               Application : For Low & Medium pressure Boiler,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               &nbsp;&nbsp;&nbsp;Residential Housing.<br>
@@ -484,10 +532,10 @@
         <br>
         <div class="col-md-6">
           <div class="center1">
-            <img src="image/New folder/sewang.png" class="product_image ">
-            <h4>Reverse Osmosis Plant</h4>
-            <p><a href="">KEY FEATURES ></a></p>
-            <p>Removal od TDS , TOC impurity from feed water<br>
+            <img src="image/New folder/sewang.png" class="product_image " data-aos="fade-in" data-aos-delay="900">
+            <h4 data-aos="fade-in" data-aos-delay="900">Reverse Osmosis Plant</h4>
+            <p data-aos="fade-in" data-aos-delay="900"><a href="">KEY FEATURES ></a></p>
+            <p data-aos="fade-in" data-aos-delay="900">Removal od TDS , TOC impurity from feed water<br>
               Capacity : 0.2m3/hr to 50 m3/hr<br>
               Application : for Drinking ,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -524,13 +572,55 @@
   </div>
  -->
 
-  <section style="background-color: #000; height: 500PX;">
+  <!--__________Section Contact Start_________-->
+
+  <section id="contact-section">
+    <div class="site-blocks-cover inner-page-cover overlay get-notification"
+      style="background-image: url( image/bgwast-water-slider.jpg); background-attachment: fixed;" data-aos="fade">
+      <div class="container-fluid contact_section">
+        <div class="row">
+          <div class="col-md-6 contact_form">
+            <h5>Contact Messages</h5>
+            <div class="contact_us">
+              <form action="JavaScript:Void(0)" onsubmit="return ValidationEvent()">
+                <input type="text" name="name" id="name" required placeholder="&nbsp;Name">
+                <input type="email" name="email" id="email" required placeholder="&nbsp;Email">
+                <input type="number" maxlength="13" name="mobile" id="mobile" required placeholder="&nbsp;Ph No">
+                <!-- <input type="text" placeholder="&nbsp;Pin code"> -->
+                <textarea name="message" id="message" placeholder="&nbsp;Message"></textarea>
+                <br>
+                <button class="button" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6 footer_form">
+            <h3>Contact Us</h3>
+            <div class="fomr_address">
+              <p>
+                ( NRSBS Water Systems Pvt.Ltd.)<br>
+                CIN : U41000WB2019PTC234477<BR>
+                Suit No.-101,21 Panpara Bye Lane, Bhadrakli,<br>
+                Uttarpara, Hooghly-712302, W.B India<br>
+                Call: +91 9874510713 / 9123888546<br>
+                Web: www.nrsbs.co.in
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--______________________Section Contact End_________________________-->
+
+
+
+  <section style="background-color: #000; height: 100PX; padding: 50px;">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">
-
+        <div class="col-md-12">
+          <p class="text-center">&copy; Copyright 2020-NRSBS. All right reserved</p>
         </div>
-        <div class="col-sm-6"></div>
       </div>
     </div>
 
@@ -555,23 +645,19 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
   <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
-
   <!-- contact js -->
   <script src="js/jquery.form.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/contact.js"></script>
-
   <script src="js/main.js"></script>
   <script src="js/stellar.js"></script>
   <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
   <script src="vendors/isotope/isotope-min.js"></script>
   <script src="js/theme.js"></script>
-
 </body>
 
 </html>
