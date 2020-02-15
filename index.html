@@ -35,26 +35,27 @@
     }
   </style>
   <script>
-    $(function () {
-      $("#contact-form").submit(function (e) {
-        alert();
-        e.preventDefault();
-        var form_data = $(this).serialize();
+    function ValidationEvent() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var mobile = document.getElementById("mobile").value;
+      var message = document.getElementById("messabe").value;
+      if (name != '' && email != '' && mobile != '') {
+        var dataString = 'name='+ name + '&email='+ email + '&mobile' + mobile + '&message' + message; 
         $.ajax({
           type: "POST",
-          url: "call-form.php",
-          dataType: "json", // Add datatype
-          data: form_data
-        }).done(function (data) {
-          console.log(data);
-          alert("It's OK!");
-        }).fail(function (data) {
-          console.log(data);
+          //url: "localhost:/nrsbs/ajaxsubmit.php",
+          url: "ajaxsubmit.php",
+          data: dataString,
+          cache: false,
+          success: function (result) {
+            alert(result);
+          }
         });
-      });
-    });
-    function contact(){
-      alert();
+      }
+      else {
+        alert("Please fill up the mandetory field");
+      }
     }
   </script>
 </head>
@@ -581,12 +582,13 @@
           <div class="col-md-6 contact_form">
             <h5>Contact Messages</h5>
             <div class="contact_us">
-              <form id="contact-form" action="contact()">
-                <input type="text" name="name" placeholder="&nbsp;Name">
-                <input type="text" name="email" placeholder="&nbsp;Email">
-                <input type="number" name="mobile" placeholder="&nbsp;Ph No">
+              <form action="JavaScript:Void(0)" onsubmit="return ValidationEvent()">
+                <input type="text" name="name" id="name" required placeholder="&nbsp;Name">
+                <input type="email" name="email" id="email" required placeholder="&nbsp;Email">
+                <input type="number" minlength="10" maxlength="13" name="mobile" id="mobile" required
+                  placeholder="&nbsp;Ph No">
                 <!-- <input type="text" placeholder="&nbsp;Pin code"> -->
-                <textarea name="message" placeholder="&nbsp;Message"></textarea>
+                <textarea name="message" id="message" placeholder="&nbsp;Message"></textarea>
                 <br>
                 <button class="button" type="submit">Submit</button>
               </form>
