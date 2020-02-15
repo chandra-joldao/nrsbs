@@ -9,8 +9,11 @@
     $message .= "<h1>Message:".$message1."</h1>";
     $to_email_address="cmanna7@gmail.com";
     $subject="Contact from ".$name;
-    $headers = "From: chandramanna@yahoo.com";
-    if ( mail($to_email_address,$subject,$message,[$headers])) {
+    $header = "From:abc@somedomain.com \r\n";
+    $header .= "Cc:afgh@somedomain.com \r\n";
+    $header .= "MIME-Version: 1.0\r\n";
+    $header .= "Content-type: text/html\r\n";
+    if ( mail($to_email_address,$subject,$message,$header)) {
         echo("Email successfully sent to $to_email_address...");
      } else {
         echo("Email sending failed...");
