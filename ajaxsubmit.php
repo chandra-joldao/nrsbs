@@ -10,7 +10,7 @@
     $to_email_address="cmanna7@gmail.com";
     $subject="Contact from ".$name;
     $headers = "From: chandramanna@yahoo.com";
-    if ( mail($to_email_address,$subject,$message,$headers)) {
+    if ( mail($to_email_address,$subject,$message,[$headers])) {
         echo("Email successfully sent to $to_email_address...");
      } else {
         echo("Email sending failed...");
