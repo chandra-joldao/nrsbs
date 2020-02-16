@@ -775,15 +775,14 @@ padding-left:200px;
   min-height: 500px;
   padding-top: 150px;
 }
-.contact_form input[type=text] {
+.contact_form input{
   width: 100%;
   padding: 2px 5px;
   margin: 6px 0;
   box-sizing: border-box; 
   border-radius: 6px;
-  /* background-color:#0255a3; */
+  background-color: white;
   border: #fff 0.6px solid;
-  color: white;
   min-height: 40;
 }
 .contact_form input[type=number] {
@@ -794,7 +793,7 @@ padding-left:200px;
   border-radius: 6px;
   /* background-color:#0255a3; */
   border: #fff 0.6px solid;
-  color: white;
+  color: rgb(12, 0, 0);
   min-height: 40;
 }
 .contact_form ::placeholder {
@@ -816,7 +815,7 @@ padding-left:200px;
   /* width: 200px; */
 }
 .contact_form h5{
-  color: #fff;
+  color: rgb(252, 252, 252);
   text-align: center;
   margin-top: 10px;
   font-size: 30px;

@@ -34,6 +34,30 @@
       height: 100%;
     }
   </style>
+  <script>
+    function ValidationEvent() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var mobile = document.getElementById("mobile").value;
+      var message = document.getElementById("message").value;
+      if (name != '' && email != '' && mobile != '') {
+        var dataString = 'name='+ name + '&email='+ email + '&mobile=' + mobile + '&message=' + message; 
+        $.ajax({
+          type: "POST",
+          //url: "localhost:/nrsbs/ajaxsubmit.php",
+          url: "ajaxsubmit.php",
+          data: dataString,
+          cache: false,
+          success: function (result) {
+            alert(result);
+          }
+        });
+      }
+      else {
+        alert("Please fill up the mandetory field");
+      }
+    }
+  </script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -388,7 +412,7 @@
       </div>
     </div>
     <div>
-      <img src="image/right_pic_1.png" class="float-right side_image2" >
+      <img src="image/right_pic_1.png" class="float-right side_image2">
     </div>
 
   </section>
@@ -556,16 +580,16 @@
       <div class="container-fluid contact_section">
         <div class="row">
           <div class="col-md-6 contact_form">
-            <!-- <h5>Whant service in your area</h5> -->
+            <h5>Contact Messages</h5>
             <div class="contact_us">
-              <form action="post">
-                <input type="text" placeholder="&nbsp;Name">
-                <input type="text" placeholder="&nbsp;Email">
-                <input type="number" placeholder="&nbsp;Ph No">
+              <form action="JavaScript:Void(0)" onsubmit="return ValidationEvent()">
+                <input type="text" name="name" id="name" required placeholder="&nbsp;Name">
+                <input type="email" name="email" id="email" required placeholder="&nbsp;Email">
+                <input type="tel" pattern="[0-9]{10}" name="mobile" id="mobile" required placeholder="&nbsp;Mobile">
                 <!-- <input type="text" placeholder="&nbsp;Pin code"> -->
-                <textarea name="text" placeholder="&nbsp;Message"></textarea>
+                <textarea id="message" placeholder="&nbsp;Message"></textarea>
                 <br>
-                <button class="button" type="button" value="submit">Submit</button>
+                <button class="button" type="submit">Submit</button>
               </form>
             </div>
           </div>
@@ -635,4 +659,5 @@
   <script src="vendors/isotope/isotope-min.js"></script>
   <script src="js/theme.js"></script>
 </body>
+
 </html>
